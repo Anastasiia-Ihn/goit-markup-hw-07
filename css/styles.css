@@ -62,6 +62,54 @@ img {
   list-style: none;
 }
 
+.container {
+  min-width: 320px;
+  max-width: 428px;
+  padding: 0 16px;
+  margin: 0 auto;
+
+  /* max-width: 1158px;
+  padding: 0 15px;
+   */
+
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
+
+.section {
+  padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding-bottom: 120px;
+  }
+}
+
+.section-about,
+.section-customers {
+  background: var(--color-white);
+}
+
+/* чи це потрібно???? */
+/* .section-about,
+.section-customers {
+  padding-top: 120px;
+} */
+
 /* заголовки */
 /* h1 */
 .hero-title {
@@ -103,26 +151,6 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-cloud);
-}
-
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.section {
-  padding-bottom: 120px;
-}
-
-.section-about,
-.section-work,
-.section-customers {
-  background: var(--color-white);
-}
-.section-about,
-.section-customers {
-  padding-top: 120px;
 }
 
 /* Header */
@@ -315,39 +343,78 @@ img {
 
 /* What are we doing */
 
-.title-what {
-  margin-bottom: 72px;
+.section-work {
+  display: none;
 }
 
-.list-section-what {
-  display: flex;
-  gap: 24px;
-}
+@media only screen and (min-width: 1158px) {
+  .section-work {
+    display: block;
+    background: var(--color-white);
+  }
 
-.img-section-what {
-  width: calc((100% - 24px * 2) / 3);
+  .title-what {
+    margin-bottom: 72px;
+  }
+
+  .list-section-what {
+    display: flex;
+    gap: 24px;
+  }
+
+  .img-section-what {
+    width: calc((100% - 24px * 2) / 3);
+  }
 }
 
 /* Our Team */
 
 .section-team {
   background-color: var(--color-cloud);
-  padding: 120px 0;
+  padding: 96px 0;
+}
+
+@media only screen and (min-width: 1158px) {
+  .section-team {
+    padding: 120px 0;
+  }
 }
 
 .title-team {
   margin-bottom: 72px;
 }
+@media only screen and (min-width: 768px) {
+  .list-section-team {
+    display: flex;
+    gap: 24px;
+  }
+}
 
 .item-team {
   border-radius: 4px;
   border-left: 4px;
-  width: calc((100% - 72px) / 4);
+  margin-bottom: 72px;
   background-color: var(--color-white);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
+@media only screen and (min-width: 768px) {
+  .item-team {
+    margin-bottom: 64px;
+    flex-wrap: wrap;
+    width: calc((100% - 24px) / 3);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .item-team {
+    margin-bottom: 0;
+    /* width: calc((100% - 72px) / 4); */
+  }
+}
+
 .blok-name-team {
   padding: 32px 0;
 }
@@ -367,11 +434,6 @@ img {
 .socials-item {
   width: 40px;
   height: 40px;
-}
-
-.list-section-team {
-  display: flex;
-  gap: 24px;
 }
 
 .socials-link {
