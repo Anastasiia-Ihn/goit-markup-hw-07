@@ -68,12 +68,8 @@ img {
   padding: 0 16px;
   margin: 0 auto;
 
-  /* max-width: 1158px;
-  padding: 0 15px;
-   */
-
-  outline: 1px solid red;
-  outline-offset: -1px;
+  /* outline: 1px solid red;
+  outline-offset: -1px; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -97,11 +93,6 @@ img {
   .section {
     padding-bottom: 120px;
   }
-}
-
-.section-about,
-.section-customers {
-  background: var(--color-white);
 }
 
 /* чи це потрібно???? */
@@ -134,15 +125,17 @@ img {
 
 /* h3 */
 .subtitle {
-  color: var(--title-text-color);
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
   letter-spacing: 0.02em;
+
+  color: var(--title-text-color);
 }
 
 .text {
   color: var(--primary-text-color);
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -318,30 +311,77 @@ img {
   background-color: var(--color-ocean);
 }
 
+/* ! */
 /* About us  */
-.list-about {
+/* ! */
+
+.section-about {
+  background: var(--color-white);
+}
+.about-container {
   display: flex;
   gap: 24px;
 }
-.items-about {
-  width: calc((100% - 24px * 3) / 4);
+.list-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .items-about {
+    width: 356px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .items-about {
+    width: calc((100% - 24px * 3) / 4);
+  }
 }
 
 .icons-list-about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 112px;
-  background-color: var(--color-cloud);
-  padding: 24px 100px;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  display: none;
 }
+
+@media only screen and (min-width: 1158px) {
+  .icons-list-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: var(--color-cloud);
+    padding: 24px 100px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+}
+
 .items-about-subtitle {
   margin-bottom: 8px;
 }
 
+@media only screen and (min-width: 768px) {
+  .items-about-subtitle {
+    text-align: start;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .items-about-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .text-about {
+    font-weight: 400;
+  }
+}
+
+/* ! */
 /* What are we doing */
+/* ! */
 
 .section-work {
   display: none;
@@ -366,8 +406,9 @@ img {
     width: calc((100% - 24px * 2) / 3);
   }
 }
-
+/* ! */
 /* Our Team */
+/* ! */
 
 .section-team {
   background-color: var(--color-cloud);
@@ -386,12 +427,15 @@ img {
 @media only screen and (min-width: 768px) {
   .list-section-team {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
   }
 }
 
 .item-team {
-  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 264px;
   border-left: 4px;
   margin-bottom: 72px;
   background-color: var(--color-white);
@@ -411,7 +455,7 @@ img {
 @media only screen and (min-width: 1158px) {
   .item-team {
     margin-bottom: 0;
-    /* width: calc((100% - 72px) / 4); */
+    width: calc((100% - 72px) / 4);
   }
 }
 
@@ -455,7 +499,13 @@ img {
   fill: var(--color-cloud);
 }
 
+/* ! */
 /* section-customers */
+/* ! */
+
+.section-customers {
+  background: var(--color-white);
+}
 
 .title-customers {
   margin-bottom: 72px;
@@ -464,9 +514,23 @@ img {
 
 .list-section-customers {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  row-gap: 72px;
+  column-gap: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .list-section-customers {
+    column-gap: 24px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .list-section-customers {
+    row-gap: 0;
+  }
 }
 
 .customers-link {
@@ -475,13 +539,18 @@ img {
   align-items: center;
   color: var(--color-light-slate);
   height: 88px;
-  width: 168px;
+  width: 188px;
   border: 1px solid var(--color-light-slate);
   border-radius: 4px;
 
   transition: border-color var(--animation), color var(--animation);
 }
 
+@media only screen and (min-width: 768px) {
+  .customers-link {
+    width: 168px;
+  }
+}
 .customers-link:hover,
 .customers-link:focus {
   color: var(--color-ocean);
