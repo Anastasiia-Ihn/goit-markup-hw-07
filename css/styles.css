@@ -1024,7 +1024,7 @@ label {
   justify-content: center;
 
   margin: 0;
-  /* margin-left: auto; */
+  margin-left: auto;
   padding: 0;
   background-color: transparent;
   cursor: pointer;
@@ -1093,5 +1093,5 @@ label {
 }
 
 .icon-burger {
-  fill: var(--color-navy-blue-modal);
+  stroke: var(--color-navy-blue-modal);
 }
