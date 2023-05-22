@@ -306,39 +306,81 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 96px;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 70%)
-    ),
-    url(../images/people-office.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 112px 0;
+
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 70%)
+    ),
+    url(../images/hero/dark-bg_mob@1x.jpg);
 }
-@media only screen and (min-width: 768px) {
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .hero {
-    max-width: 768px;
-    height: 436px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 70%)
       ),
-      url(../images/people-office.jpg);
+      url(../images/hero/dark-bg_mob@2x.jpg);
   }
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 429px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 70%)
+      ),
+      url(../images/hero/dark-bg_tab@1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 70%)
+        ),
+        url(../images/hero/dark-bg_tab@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 70%)
+      ),
+      url(../images/hero/dark-bg_desk@1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 70%)
+        ),
+        url(../images/hero/dark-bg_desk@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
   .hero {
     margin-bottom: 120px;
     padding: 188px 0;
     max-width: 1440px;
     height: 600px;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 70%)
-      ),
-      url(../images/people-office.jpg);
   }
 }
 
