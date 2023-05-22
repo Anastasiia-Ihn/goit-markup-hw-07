@@ -923,6 +923,7 @@ input:focus-visible {
 }
 
 .items-portfolio {
+  width: 360px;
   gap: 24px;
 }
 
