@@ -304,10 +304,18 @@ img {
   padding: 16px 0;
 }
 
+@media only screen and (min-width: 768px) {
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    column-gap: 40px;
+    row-gap: 12px;
+  }
+}
+
 @media only screen and (min-width: 1158px) {
   .contacts-list {
-    gap: 40px;
-    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -881,14 +889,36 @@ input:focus-visible {
 /* Portfolio */
 
 .section-portfolio {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
+
+@media only screen and (min-width: 768px) {
+  .section-portfolio {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .section-portfolio {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
 .button-portfolio-contaiter {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   margin-bottom: 72px;
   gap: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .button-portfolio-contaiter {
+    justify-content: center;
+  }
 }
 
 .button-portfolio {
@@ -941,8 +971,20 @@ input:focus-visible {
 }
 
 .items-portfolio {
-  width: 360px;
+  max-width: 396px;
+
   gap: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .items-portfolio {
+    max-width: 356px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .items-portfolio {
+    max-width: 360px;
+  }
 }
 
 .item-portfolio {
@@ -1372,4 +1414,55 @@ label {
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   fill: var(--color-white);
+}
+
+/* contacts  */
+.title-contacts {
+  color: var(--color-navy-blue-modal);
+}
+
+.title-contacts-list {
+  font-size: 40px;
+}
+
+.link-contacts {
+  font-size: 30px;
+  color: var(--color-ocean);
+}
+
+@media only screen and (min-width: 1158px) {
+  .link-contacts:hover,
+  .link-contacts:focus {
+    color: var(--color-iris);
+  }
+}
+
+.cont-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  row-gap: 50px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .cont-list {
+    justify-content: space-between;
+  }
+}
+
+.icon-list-contacts {
+  fill: var(--color-navy-blue-modal);
+  margin-bottom: 5px;
+}
+
+.list-cont {
+  transition: transform var(--animation);
+}
+
+.list-cont:hover {
+  transform: scale(1.1);
+}
+
+.iframe-card {
+  width: 100%;
 }

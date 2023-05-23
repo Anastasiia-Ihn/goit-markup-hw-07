@@ -20,22 +20,30 @@
   <body>
     <header class="page-header header">
       <div class="container container-header">
+        <a href="./index.html" class="logo link"
+          >Web <span class="logo-part">Studio</span>
+        </a>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="icon-burger" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
         <nav class="list container-nav">
-          <a href="./index.html" class="logo link logo-header"
-            >Web <span class="logo-part">Studio</span>
-          </a>
-
           <ul class="site-nav list link">
-            <li class="site-nav-item">
+            <li>
               <a class="site-nav-link link" href="./index.html">Studio</a>
             </li>
-            <li class="site-nav-item">
+            <li>
               <a class="site-nav-link link active" href="./portfolio.html"
                 >Portfolio</a
               >
             </li>
-            <li class="site-nav-item">
-              <a class="site-nav-link link" href="">Contacts</a>
+            <li>
+              <a class="site-nav-link link" href="./contacts.html">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -637,5 +645,100 @@
         </div>
       </div>
     </footer>
+
+    <!-- burger -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu modal-close-btn">
+        <svg
+          class="modal-close-icon"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="8"
+          height="8"
+        >
+          <use href="./images/icons.svg#icon-btn-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li>
+          <a class="menu-item link" href="./index.html">Studio</a>
+        </li>
+        <li>
+          <a class="menu-item link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li>
+          <a class="menu-item link" href="">Contacts</a>
+        </li>
+      </ul>
+      <ul class="contacts-list list mobile-contacts">
+        <li>
+          <a class="contacts-mobile link tel" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li>
+          <a class="contacts-mobile link mail" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="list socials mobile-socials">
+        <li class="socials-item">
+          <a
+            class="socials-link link socials-link-footer"
+            href=""
+            aria-label="Instagram icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link socials-link-footer"
+            href=""
+            aria-label="Twitter icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link socials-link-footer"
+            href=""
+            aria-label="Facebook icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link link socials-link-footer"
+            href=""
+            aria-label="Linkedin icon"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mobile menu  -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
